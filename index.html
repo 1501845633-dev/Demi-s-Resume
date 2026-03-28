@@ -440,6 +440,32 @@
         .delay-3 {
             animation-delay: 0.6s;
         }
+
+        /* ==================== 紧急修复图片显示 ==================== */
+        .profile-img {
+            width: 300px !important;
+            height: 300px !important;
+            border-radius: 50% !important;
+            object-fit: cover !important;
+            border: 4px solid #00d5ff !important;
+            background-color: transparent !important;
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .gallery-item img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            border: 3px solid lime !important;   /* 临时绿色边框方便查看 */
+        }
+
+        /* 如果还是不行，强制显示 */
+        .hero-image img,
+        .gallery-item img {
+            display: block !important;
+        }
     </style>
 </head>
 <body>
