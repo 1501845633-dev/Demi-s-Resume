@@ -8,6 +8,13 @@
   ],
   "routes": [
     {
+      "src": "/images/(.*)",
+      "headers": {
+        "Cache-Control": "public, max-age=3600"
+      },
+      "dest": "/images/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html"
     }
