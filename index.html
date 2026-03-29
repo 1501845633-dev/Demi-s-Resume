@@ -147,14 +147,19 @@
             align-items: center;
         }
 
+        /* ==================== 修复图片显示 ==================== */
         .profile-img {
             width: 300px;
             height: 300px;
             border-radius: 50%;
             object-fit: cover;
+            object-position: center;
             border: 3px solid var(--accent);
             box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
             display: block;
+            background-color: var(--bg-card);
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         /* Sections */
@@ -320,6 +325,8 @@
             height: 100%;
             object-fit: cover;
             display: block;
+            -webkit-user-select: none;
+            user-select: none;
         }
 
         /* Contact Section */
@@ -476,7 +483,7 @@
                 <div class="hero-text">
                     <h1 class="fade-in">Jingni Peng</h1>
                     <h2 class="fade-in delay-1">International Operations Intern Candidate</h2>
-                    <p class="fade-in delay-2">Aspiring International Operations Intern with strong expertise in AI-driven content analysis, cross-cultural communication, and overseas social media strategy. Passionate about leveraging data insights and narrative frameworks to support global developer operations and community engagement.</p>
+                    <p class="fade-in delay-2">Aspiring International Operations Intern with strong expertise in AI-driven content analysis, cross-cultural communication, and overseas social media strategy.
                     <div class="contact-info fade-in delay-3">
                         <div class="contact-item">
                             <span>📍</span>
@@ -493,7 +500,7 @@
                     </div>
                 </div>
                 <div class="hero-image fade-in delay-2">
-                    <img src="profile.jpg" alt="Jingni Peng" class="profile-img">
+                    <img src="https://raw.githubusercontent.com/1501845633-dev/Demi-s-Resume/main/profile.jpg?v=20260329001" alt="Jingni Peng" class="profile-img">
                 </div>
             </div>
         </div>
@@ -641,22 +648,22 @@
             <h2 class="section-title">Gallery</h2>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="photo1.jpg" alt="Gallery Photo 1">
+                    <img src="https://raw.githubusercontent.com/1501845633-dev/Demi-s-Resume/main/photo1.jpg?v=20260329001" alt="Gallery Photo 1">
                 </div>
                 <div class="gallery-item">
-                    <img src="photo2.jpg" alt="Gallery Photo 2">
+                    <img src="https://raw.githubusercontent.com/1501845633-dev/Demi-s-Resume/main/photo2.jpg?v=20260329001" alt="Gallery Photo 2">
                 </div>
                 <div class="gallery-item">
-                    <img src="photo3.jpg" alt="Gallery Photo 3">
+                    <img src="https://raw.githubusercontent.com/1501845633-dev/Demi-s-Resume/main/photo3.jpg?v=20260329001" alt="Gallery Photo 3">
                 </div>
                 <div class="gallery-item">
-                    <img src="photo4.jpg" alt="Gallery Photo 4">
+                    <img src="https://raw.githubusercontent.com/1501845633-dev/Demi-s-Resume/main/photo4.jpg?v=20260329001" alt="Gallery Photo 4">
                 </div>
                 <div class="gallery-item">
-                    <img src="photo5.jpg" alt="Gallery Photo 5">
+                    <img src="https://raw.githubusercontent.com/1501845633-dev/Demi-s-Resume/main/photo5.jpg?v=20260329001" alt="Gallery Photo 5">
                 </div>
                 <div class="gallery-item">
-                    <img src="photo6.jpg" alt="Gallery Photo 6">
+                    <img src="https://raw.githubusercontent.com/1501845633-dev/Demi-s-Resume/main/photo6.jpg?v=20260329001" alt="Gallery Photo 6">
                 </div>
             </div>
         </div>
@@ -680,9 +687,9 @@
                         </div>
                         <div style="margin-bottom: 1.5rem;">
                             <label for="message" style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Message</label>
-                            <textarea id="message" name="message" rows="6" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 5px; background-color: var(--bg-card); color: var(--text-primary);"></textarea>
+                            <textarea id="message" name="message" rows="6" style="width: 100%; padding: 0.75rem; border: 1px solid var(--border); border-radius: 5px; background-color: var(--bg-card); color: var(--text-primary); font-family: inherit; resize: vertical;"></textarea>
                         </div>
-                        <button type="submit" style="padding: 0.75rem 2rem; background-color: var(--accent); color: var(--bg-primary); border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: background-color 0.3s ease;">Send Message</button>
+                        <button type="submit" style="padding: 0.75rem 2rem; background-color: var(--accent); color: var(--bg-primary); border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">Send Message</button>
                     </form>
                 </div>
                 <div style="flex: 1; min-width: 300px;">
@@ -732,40 +739,5 @@
 
     <script>
         // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-
-        // Close mobile menu when clicking on a link
-        const navLinkItems = navLinks.querySelectorAll('a');
-        navLinkItems.forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-            });
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-</body>
-</html>
+        const mobileMenu*
+
